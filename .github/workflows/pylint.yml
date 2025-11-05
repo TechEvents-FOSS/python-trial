@@ -33,3 +33,9 @@ jobs:
       with:
         name: pylint-report
         path: pylint_report.txt
+    - name: Generate badge JSON
+      run: |
+          SCORE=$(grep -oP '(?<=Your code has been rated at )[-0-9\.]+' pylint_report.txt)
+          echo "{\"schemaVersion\":1,\"label\":\"pylint\",\"message\":\"$SCORE/10\",\"color\":\"blue\"}" > pylint-badge.json
+          mkdir -p badges
+          mv pylint-badge.json badges/
