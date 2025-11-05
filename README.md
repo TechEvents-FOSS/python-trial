@@ -11,7 +11,11 @@ Simple CI Demo for Python code
 [![Pylint](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml/badge.svg)](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml)
 
 ## Pylint score
-![Pylint Score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/TechEvents-FOSS/python-trial/badges/pylint-badge.json)
+[![Pylint Score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/TechEvents-FOSS/python-trial/badges/pylint-badge.json)](https://raw.githubusercontent.com/TechEvents-FOSS/python-trial/badges/pylint-badge.json)
+
+## Coverage
+[![Coverage Status](https://codecov.io/gh/TechEvents-FOSS/python-trial/branch/main/graph/badge.svg)](https://codecov.io/gh/TechEvents-FOSS/python-trial)
+
 
 ## Color Badge Color
 [![Pylint Score](https://img.shields.io/badge/pylint-0.0%20%2F%205.0-red)](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml)
