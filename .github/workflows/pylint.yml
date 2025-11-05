@@ -21,3 +21,11 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+    - name: Extract score
+        id: extract_score
+        run: |
+          score=$(grep "rated at" pylint-output.txt | sed -E 's/.*rated at ([0-9]+\.[0-9]+)\/10.*/\1/')
+          echo "score=$score" >> $GITHUB_OUTPUT
+      - name: Set badge label (optional)
+        run: |
+          echo "::set-output name=badge_url::https://img.shields.io/badge/pylint-${{ steps.extract_score.outputs.score }}%2F10-brightgreen"
